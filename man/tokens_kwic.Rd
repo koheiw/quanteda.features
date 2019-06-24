@@ -13,5 +13,5 @@ Segment documents into windows
 \examples{
 require(quanteda)
 toks <- tokens(data_corpus_irishbudget2010)
-tokens_kwic(toks, "tax")
+toks_kwic <- tokens_kwic(toks, "tax")
 }

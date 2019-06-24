@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "##",
+  fig.path = "man/images/"
+)
+```
+
+```{r, message=FALSE}
+require(quanteda)
+require(quanteda.features)
+toks <- tokens(tail(data_corpus_irishbudget2010, 20))
+dict <- dictionary(file = "/home/kohei/Documents/Dictionary/Lexicoder/policy_agendas_english.lcd")
+```
+
+```{r}
+dfm_opinions(toks, dict, data_dictionary_LSD2015[1:2], window = 100) %>% 
+  as.matrix()  
+```
+
+```{r}
+dfm_opinions(toks, dict, data_dictionary_LSD2015[1:2], window = 100) %>% 
+  #as.matrix()  
+  textstat_dist() %>% 
+  as.dist() %>% 
+    hclust() %>% 
+    plot()
+```
+
+```{r}
+dfm(toks, remove = stopwords()) %>% 
+    textstat_dist() %>% 
+    as.dist() %>% 
+    hclust() %>% 
+    plot()
+```
+

@@ -1,17 +1,17 @@
 Package: quanteda.features
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Provides functions of advanced feature extraction
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: person("Kohei", "Watanabe", email = "watanabe.kohei@gmail.com", role = c("aut", "cre", "cph"))
+Maintainer: Kohei Watanabe <watanabe.kohei@gmail.com>
+Description: Provides shortcut functions to identify and select features using quanteda 
+License: MIT + file LICENSE
+BugReports: https://github.com/koheiw/quanteda.features/issues
 Encoding: UTF-8
 Imports:
-    quanteda,
+    quanteda (>= 1.5.0),
     RcppParallel
-LinkingTo: Rcpp, RcppParallel, 
+LinkingTo: Rcpp, RcppParallel, quanteda
 LazyData: true
 RoxygenNote: 6.1.1
 SystemRequirements: C++11

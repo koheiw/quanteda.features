@@ -1,3 +1,6 @@
+// [[Rcpp::depends(quanteda)]]
+
+#include <Rcpp.h>
 #include "quanteda.h"
 #include "recompile.h"
 //#include "dev.h"

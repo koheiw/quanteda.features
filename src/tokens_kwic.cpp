@@ -1,9 +1,6 @@
-// [[Rcpp::depends(quanteda)]]
-
-#include <Rcpp.h>
-#include "quanteda.h"
-#include "recompile.h"
-//#include "dev.h"
+#include <lib.h>
+#include <recompile.h>
+//#include <dev.h>
 using namespace quanteda;
 
 typedef std::pair<size_t, size_t> Target;

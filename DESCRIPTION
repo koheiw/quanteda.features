@@ -11,7 +11,7 @@ Encoding: UTF-8
 Imports:
     quanteda (>= 1.5.0),
     RcppParallel
-LinkingTo: Rcpp, RcppParallel, quanteda
+LinkingTo: Rcpp, RcppParallel, RcppArmadillo, quanteda
 LazyData: true
 RoxygenNote: 6.1.1
 SystemRequirements: C++11

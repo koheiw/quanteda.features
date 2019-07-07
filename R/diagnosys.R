@@ -26,7 +26,7 @@ diagnosys.corpus <- function(x, ...) {
 
     n_sent <- ntoken(tokens(x, what = "sentence"))
     temp <- dfm(tokens(x, ...))
-    n_token <- nfeat(temp)
+    n_token <- ntoken(temp)
     result <- convert(
         dfm_lookup(temp, dictionary = dict, valuetype = "regex"),
         "data.frame"
